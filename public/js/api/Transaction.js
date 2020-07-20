@@ -5,3 +5,4 @@
  * */
 class Transaction extends Entity {
 }
+Transaction.url = '/transaction'

@@ -3,7 +3,7 @@
  * кнопки скрытия/показа колонки в мобильной версии сайта
  * и за кнопки меню
  * */
-class Sidebar {
+class Sidebar extends Modal {
   /**
    * Запускает initAuthLinks и initToggleButton
    * */
@@ -33,7 +33,11 @@ class Sidebar {
    * выходу устанавливает App.setState( 'init' )
    * */
   static initAuthLinks() {
+      let modalRegister = App.getModal('register');
+      document.querySelector('.menu-item_register').onclick = () => modalRegister.open();
 
+      let modalLogin = App.getModal('login');
+      document.querySelector('.menu-item_login').onclick = () => modalLogin.open()
   }
 
 }
