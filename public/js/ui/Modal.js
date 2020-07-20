@@ -13,7 +13,7 @@ class Modal {
    * необходимо выкинуть ошибку.
    * */
   constructor( element ) {
-
+    
   }
 
   /**
