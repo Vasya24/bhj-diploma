@@ -11,7 +11,10 @@ class TransactionsWidget {
    * необходимо выкинуть ошибку.
    * */
   constructor( element ) {
-
+    if (element) {
+      this.element = element;
+      this.registerEvents();
+    } else throw 'Нет такого элемента! Вращайте барабан!';
   }
   /**
    * Регистрирует обработчики нажатия на
@@ -20,6 +23,10 @@ class TransactionsWidget {
    * экземпляра окна
    * */
   registerEvents() {
+      let income = document.querySelector('.create-income-button');
+      income.addEventListener('click', () => {
 
+      })
   }
+  
 }

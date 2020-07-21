@@ -16,7 +16,7 @@ class Modal {
     if (element) {
       this.element = element;
       this.registerEvents();
-    } else throw 'Элемента не существует!';
+    } else throw 'Нет такого элемента! Вращайте барабан!';
   }
 
   /**

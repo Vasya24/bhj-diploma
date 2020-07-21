@@ -13,7 +13,7 @@ class UserWidget {
   constructor( element ) {
     if (element) {
       this.element = element;
-    } else throw 'Элемента не существует!';
+    } else throw 'Нет такого элемента! Вращайте барабан!';
   }
   /**
    * Получает информацию о текущем пользователе
