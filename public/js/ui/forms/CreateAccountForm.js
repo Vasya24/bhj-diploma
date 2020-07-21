@@ -11,6 +11,10 @@ class CreateAccountForm {
    * и сбрасывает форму
    * */
   onSubmit( options ) {
-
+    Account.create(options, () => {
+      App.update();
+      this.element.reset();
+      App.modals.createAccount.close();
+    });
   }
 }

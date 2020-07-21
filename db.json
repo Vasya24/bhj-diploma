@@ -6,6 +6,10 @@
       "password": "demo",
       "id": "1",
       "isAuthorized": true
+    },
+    {
+      "id": "1khtrv3ujkcvp0fnj",
+      "isAuthorized": true
     }
   ],
   "accounts": [
