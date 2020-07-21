@@ -92,7 +92,7 @@ class User {
       method: 'POST',
       callback: (err, response) => {
         if (response.success) {
-          User.setCurrent({ id: response.user.id, name: response.user.name });
+          User.setCurrent({ id: response.user.id, name: response.user.name, isAuthorized: true });
         } else {
           alert(response.error);
           return response.error;

@@ -8,7 +8,10 @@
       "isAuthorized": true
     },
     {
-      "id": "1khtrv3ujkcvp0fnj",
+      "name": "Базелиус",
+      "email": "bazelius@yandex.ru",
+      "password": "demo",
+      "id": "1khtrv32vckcvvl314",
       "isAuthorized": true
     }
   ],

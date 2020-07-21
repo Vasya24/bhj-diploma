@@ -37,7 +37,13 @@ class Sidebar extends Modal {
       document.querySelector('.menu-item_register').onclick = () => modalRegister.open();
 
       let modalLogin = App.getModal('login');
-      document.querySelector('.menu-item_login').onclick = () => modalLogin.open()
+      document.querySelector('.menu-item_login').onclick = () => modalLogin.open();
+
+      document.querySelector('.menu-item_logout').onclick = function(e) {
+        e.preventDefault();
+        User.logout;
+        App.setState('init')
+      }
   }
 
 }
