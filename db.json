@@ -16,7 +16,11 @@
     }
   ],
   "accounts": [
-
+    {
+      "name": "ЗП счёт",
+      "user_id": "1",
+      "id": "m83m8kcxayjoo"
+    }
   ],
   "transactions": []
 }
