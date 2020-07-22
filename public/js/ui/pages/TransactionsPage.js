@@ -11,14 +11,18 @@ class TransactionsPage {
    * через registerEvents()
    * */
   constructor( element ) {
-
+    if (element) {
+      this.element = element;
+      this.registerEvents();
+      this.update();
+    } else throw 'Нет такого элемента! Вращайте барабан!';
   }
 
   /**
    * Вызывает метод render для отрисовки страницы
    * */
   update() {
-
+    this.render()
   }
 
   /**
@@ -28,7 +32,16 @@ class TransactionsPage {
    * TransactionsPage.removeAccount соответственно
    * */
   registerEvents() {
-
+  //   if (User) {
+  //   let removeAcc = this.querySelector('.remove-account');
+  //   let removeTrans = this.querySelector('.transaction__remove');
+  //   removeAcc.addEventListener('click', () => {
+  //     TransactionsPage.removeAccount()
+  //   });
+  //   removeTrans.addEventListener('click', () => {
+  //     TransactionsPage.removeTransaction()
+  //   })
+  // }
   }
 
   /**
@@ -40,7 +53,14 @@ class TransactionsPage {
    * для обновления приложения
    * */
   removeAccount() {
-
+    // let accRemoveConf = confirm('Ты всё? Стираем?')
+    // if (accRemoveConf === true) {
+    //   AccountsWidget.remove(this);
+    //   TransactionsPage.clear();
+    //   App.update();
+    // } else {
+    //   return false
+    // }
   }
 
   /**
@@ -49,7 +69,14 @@ class TransactionsPage {
    * По удалению транзакции вызовите метод App.update()
    * */
   removeTransaction( id ) {
-
+    
+    // let transRemoveConf = confirm('Это больше не нужно?');
+    // if (transRemoveConf === true) {
+    //   this.remove()
+    //   App.update();
+    // } else {
+    //   return false
+    // }
   }
 
   /**
@@ -59,7 +86,9 @@ class TransactionsPage {
    * в TransactionsPage.renderTransactions()
    * */
   render( options ) {
-
+    // TransactionsPage.renderTitle;
+    // Transactions.list;
+    // TransactionsPage.renderTransactions()
   }
 
   /**
@@ -75,7 +104,7 @@ class TransactionsPage {
    * Устанавливает заголовок в элемент .content-title
    * */
   renderTitle( name ) {
-
+    document.querySelector('.content-title').innerHTML = name;
   }
 
   /**
@@ -83,7 +112,15 @@ class TransactionsPage {
    * в формат «10 марта 2019 г. в 03:20»
    * */
   formatDate( date ) {
-
+      date = new Date();
+      let options = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric'
+      }
+      date.toLocaleString("ru", options)
   }
 
   /**
